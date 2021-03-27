@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<!-- Image and text -->
+<nav class="navbar navbar-light" style="background: mediumpurple;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="am.png" alt="" width="30" height="24" class="d-inline-block align-top">AM Pizza</a>
+      <a class="btn btn-danger" href="userloginview">Login</a>
+  </div>
+</nav>
+
+
+
+{% for message in messages %}
+<div class="alert alert-warning alert-dismissible fade show" role="alert" style="width: 40%;display: block;margin: auto;padding-block: 5px;padding-top: 10px;">
+  <strong>{{message}}</strong>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endfor %}
+
+
+
+
+<div class="container" style="background-color: orange;margin: auto;margin-top: 211px;width: 341px;display: block;padding: 15px;font-size: 20px;position: absolute;margin-left: 33px;">
+
+  <form method="post" action="signupuser" >
+    <h1 style="text-align:center;">Sign Up!</h1>
+        {% csrf_token %}
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email</label>
+    <input type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="InputPassword1" class="form-label">Password</label>
+    <input type="password" name="password" class="form-control" id="InputPassword1">
+  </div>
+    <div class="mb-3">
+    <label for="Phoneno" class="form-label">Contact Number</label>
+    <input type="text" name="phoneno" class="form-control" id="Phoneno">
+  </div>
+  <button type="submit" style="color: lavenderblush; background: mediumpurple; display:block; margin:auto">Sign Up</button>
+</form>
+</div>
+
+
+
+
+{% endblock %}
