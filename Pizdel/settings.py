@@ -25,7 +25,7 @@ SECRET_KEY = 'j@r6-z&)@*!g3u!1ddakek*ffmbai3va=pz67o=!got^_obtz%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1','pizza-del-app.herokuapp.com']
 
 
 # Application definition
