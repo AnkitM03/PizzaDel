@@ -1,2 +1,0 @@
-# PizzaDel
-Pizza Delivery app
